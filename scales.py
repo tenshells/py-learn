@@ -101,6 +101,8 @@ def keyboardLayout(Scale=Major,CL=dCL):
     ChordMaker4(Scale,CL[7],3,3)
 
 
-log = open("C:\Program Files\Image-Line\FL Studio 20\System\Config\Typing to piano\Chords\DorianDCL.scr", "a")
+# log = open("C:\Program Files\Image-Line\FL Studio 20\System\Config\Typing to piano\Chords\DorianDCL.scr", "a")
+log = open("C:\Program Files\Image-Line\FL Studio 21\System\Config\Typing to piano\PyChords\DorianDCL", "a")
+
 print = log.write
 keyboardLayout(Dorian)
