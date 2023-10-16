@@ -13,6 +13,8 @@ Mixolydian = All[4:11]
 Minor = All[5:12]
 Locrian = All[6:13]
 
+
+
 def scaler(Scale):
     i=0 
     j=0
@@ -28,27 +30,6 @@ def pArr(a):
         print(f'{i+1}. {a[i]}')
 
 # pArr(scaler(Minor))
-
-def C7s(Scale):
-    
-    s = scaler(Scale) *3
-    S = []
-    a=[1]*7 + [2]*7 + [3]*7
-    for i in range(len(s)):
-        S.append(str(s[i]) + str(a[i]))
-    for i in range(7):
-        print(f'{i+1}. {S[i]}  {S[i+2]}  {S[i+4]}  {S[i+6]}')
-
-#C7s(Lydian)
-
-def C9s(Scale):
-    s = scaler(Scale) *3
-    S = []
-    a=[1]*7 + [2]*7 + [3]*7
-    for i in range(len(s)):
-        S.append(str(s[i]) + str(a[i]))
-    for i in range(7):
-        print(f'{i+1}. {S[i]}  {S[i+2]}  {S[i+4]}  {S[i+6]}  {S[i+8]}')
 
 def ChordMaker4(Scale=Major,cp=[0,2,4,6], base=3,keys=7):
     #cp = chord pattern like 0,2,4,6 meaning 7th on base,   1) c e g b on first note c in Major 
@@ -85,6 +66,7 @@ dCL =   [add11,add69,
         sevenths,add9,
         strong9,wierd913]
 
+
 def keyboardLayout(Scale=Major,CL=dCL):
     ChordMaker4(Scale,CL[0],4)
     ChordMaker4(Scale,CL[1],4,6)
@@ -102,7 +84,11 @@ def keyboardLayout(Scale=Major,CL=dCL):
 
 
 # log = open("C:\Program Files\Image-Line\FL Studio 20\System\Config\Typing to piano\Chords\DorianDCL.scr", "a")
-log = open("C:\Program Files\Image-Line\FL Studio 21\System\Config\Typing to piano\PyChords\DorianDCL", "a")
+# log = open("C:\Program Files\Image-Line\FL Studio 21\System\Config\Typing to piano\PyChords\DorianDCL", "c")
+
+
+
+log = open("C:\Program Files\Image-Line\FL Studio 21\System\Config\Typing to piano\PyChords\DorianDCL", "c")
 
 print = log.write
 keyboardLayout(Dorian)
